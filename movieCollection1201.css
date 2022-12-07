@@ -1,0 +1,573 @@
+.fog {
+  /* width: 2538px; */
+  height: 7700px;
+  background: url(./picture/noise\ 8.png);
+  /* margin: auto; */
+}
+
+.jumbotron {
+  height: 964px;
+  background: url(./picture/banner\ 1.png) no-repeat center center / cover;
+}
+
+.container {
+  padding-top: 80px;
+}
+
+.bannerFrame {
+  /* width: 1824px; */
+  height: 800px;
+  border: 15px solid #fff;
+  background: linear-gradient(to bottom, transparent, transparent);
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+}
+
+.cornNav {
+  /* width: 1808px; */
+  height: 64px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.cornNav img {
+  margin-right: 800px;
+}
+
+.navbar-right {
+  display: flex;
+}
+.navbar-right a {
+  color: #204387;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  padding-left: 0;
+  margin-left: 50px;
+  font-size: 20px;
+}
+
+.navbar-right a:hover {
+  color: #f5ca0d;
+}
+
+.navbar-right li {
+  list-style: none;
+}
+
+.bannerFrame h1 {
+  /* width: 504px; */
+  height: 200px;
+  margin-top: 160px;
+  margin-left: 250px;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 128px;
+  line-height: 160px;
+  color: #ffffff;
+  text-shadow: 0px 4px 22px rgba(0, 0, 0, 0.52);
+}
+
+.bannerFrame h4 {
+  /* width: 457px; */
+  height: 55px;
+  left: 862px;
+  top: 508px;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 55px;
+  color: #ffff;
+  text-shadow: 0px 4px 22px rgba(0, 0, 0, 0.52);
+  margin-left: 500px;
+  margin-top: 0;
+}
+
+.search-category {
+  display: flex;
+  margin-left: 300px;
+  margin-top: 70px;
+}
+
+.movieSearch {
+  width: 300px;
+  height: 50px;
+  border: 4px solid #f5ca0d;
+  border-radius: 5px;
+}
+
+.movieSearch .tip {
+  font-size: 40px;
+}
+
+.movieSearch option .tip {
+  color: #204387;
+  font-size: 30px;
+}
+.movieSearch option:hover {
+  background: #f5ca0d;
+}
+
+.search-category .keyword {
+  width: 280px;
+  height: 52px;
+  margin-left: 15px;
+  border-radius: 5px;
+}
+.search-category a {
+  width: 52px;
+  height: 52px;
+  margin-left: 12px;
+}
+
+.gap {
+  margin-bottom: 100px;
+}
+
+/* 本月最新 */
+#section_new {
+  margin-top: 50px;
+}
+
+.defNew {
+  /* width: 1800px; */
+  height: 700px;
+  position: relative;
+  margin: auto;
+  background-color: #d8b000;
+  border: 8px solid #fff;
+}
+
+.defNew_left_top,
+.defNew_right_top,
+.defNew_left_bottom,
+.defNew_right_bottom {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  z-index: 1;
+  background: transparent;
+}
+
+.defNew_left_top {
+  top: -8px;
+  left: -9px;
+  border-radius: 0 0 90px 0;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defNew_right_top {
+  top: -8px;
+  right: -9px;
+  border-radius: 0 0 0 90px;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defNew_left_bottom {
+  left: -9px;
+  bottom: -9px;
+  border-radius: 0 90px 0 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defNew_right_bottom {
+  right: -9px;
+  bottom: -9px;
+  border-radius: 90px 0 0 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.new {
+  text-align: center;
+}
+.new .mainTitle {
+  margin-top: 15px;
+  font-size: 40px;
+  color: #fff;
+}
+.new .subTitle {
+  font-size: 25px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.new_wrap {
+  display: flex;
+  width: 800px;
+  margin: auto;
+}
+
+.new_wrap .new_item {
+  width: 50%;
+}
+
+.new_wrap .pic img {
+  /* width: 800px; */
+  /* 解決圖片下方空隙的小瑕疵，造成原因是基線，所以可以用vertical-align寫成top或bottom或center，去解決*/
+  vertical-align: bottom;
+  margin-top: 34px;
+  margin-left: 120px;
+  padding: 0px;
+}
+
+.new_wrap .text {
+  display: flex;
+  /* 資料流主軸預設是左右，所以要改為由上往下為"欄column"，所以flex-direction: column;，置中justify-content: center; */
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px;
+  text-align: left;
+  margin-bottom: 30px;
+  margin-left: 450px;
+  margin-top: 32px;
+}
+
+.new_wrap .new_item h1 {
+  /* width: 500px; */
+  font-size: 25px;
+}
+
+.new_wrap .new_item p {
+  /* width: 500px; */
+  font-size: 15px;
+  padding: 0 0 30px;
+  margin-bottom: 20px;
+}
+
+.new_item .btn {
+  /* width: 100px; */
+  height: 40px;
+  line-height: 1.5em;
+  font-size: 20px;
+  border: solid 3px #000;
+  padding: 0 1em;
+  align-self: flex-end;
+  /* 因為主軸已經變column，所以次軸align-self靠右對齊end */
+  text-decoration: none;
+  /* 底線拿掉 */
+  border-radius: 200px;
+  margin-top: 5px;
+  margin-left: 200px;
+  color: #000;
+}
+
+/* 電影發燒排行榜 */
+.defHotrank {
+  /* width: 1800px; */
+  height: 700px;
+  position: relative;
+  margin: auto;
+  border: 8px solid #fff;
+  background-color: #d04215;
+}
+
+.defHotrank_left_top,
+.defHotrank_right_top,
+.defHotrank_left_bottom,
+.defHotrank_right_bottom {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  z-index: 1;
+  background: transparent;
+}
+
+.defHotrank_left_top {
+  top: -9px;
+  left: -9px;
+  border-radius: 0 0 90px 0;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defHotrank_right_top {
+  top: -9px;
+  right: -9px;
+  border-radius: 0 0 0 90px;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defHotrank_left_bottom {
+  left: -9px;
+  bottom: -9px;
+  border-radius: 0 90px 0 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defHotrank_right_bottom {
+  right: -9px;
+  bottom: -9px;
+  border-radius: 90px 0 0 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.hotrank {
+  text-align: center;
+}
+.hotrank .mainTitle {
+  margin-top: 15px;
+  font-size: 40px;
+  color: #fff;
+}
+.hotrank .subTitle {
+  font-size: 25px;
+  color: #fff;
+  padding-top: 10px;
+}
+.imgRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.imgRow .poster-rank {
+  width: 350px;
+}
+
+.defHotrank img {
+  width: 260px;
+  height: 400px;
+  margin-left: 50px;
+  object-fit: cover;
+}
+
+.rankTitle h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* 熱門推薦 */
+.defRef {
+  /* width: 1800px; */
+  height: 4500px;
+  position: relative;
+
+  margin: auto;
+  background-color: #204387;
+  border: 11px solid #fff;
+}
+
+.defRef_left_top,
+.defRef_right_top,
+.defRef_left_bottom,
+.defRef_right_bottom {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  z-index: 1;
+  background: transparent;
+}
+
+.defRef_left_top {
+  top: -11px;
+  left: -11px;
+  border-radius: 0 0 90px 0;
+  border-bottom: 11px solid #fff;
+  border-right: 11px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defRef_right_top {
+  top: -11px;
+  right: -12px;
+  border-radius: 0 0 0 90px;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defRef_left_bottom {
+  left: -11px;
+  bottom: -11px;
+  border-radius: 0 90px 0 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.defRef_right_bottom {
+  right: -12px;
+  bottom: -11px;
+  border-radius: 90px 0 0 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(./picture/noise\ 8.png);
+}
+
+.ref {
+  text-align: center;
+}
+.ref .mainTitle {
+  margin-top: 15px;
+  font-size: 40px;
+  color: #fff;
+}
+.ref .subTitle {
+  font-size: 25px;
+  color: #fff;
+  padding-top: 10px;
+}
+
+.wrap {
+  /* width: 800px;
+  height: 800px; */
+
+  display: flex;
+  justify-content: space-evenly;
+  /* margin: auto; */
+  /* margin:auto 會自動將空白處劃分置中 */
+}
+
+.item {
+  width: 270px;
+  height: 550px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: solid 1px rgba(255, 255, 255, 0.1);
+  margin-top: 50px;
+  /* transform: translateY(0px);
+  transition: 0.5s; */
+  /* 滑鼠觸碰動畫變動 */
+}
+
+.item img {
+  width: 268px;
+  /* width: 100%; */
+  vertical-align: bottom;
+}
+
+.item h2 {
+  border-bottom: solid 1px #888;
+  padding-bottom: 0.3em;
+  margin-bottom: 0.4em;
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 25px;
+}
+
+.item p {
+  line-height: 1.6;
+  font-weight: 400;
+  margin: 0;
+}
+
+.item .txt {
+  padding: 5px;
+  margin-top: 5px;
+  position: relative;
+  color: #fff;
+}
+
+.wrapBGC1 {
+  /* width: 1780px; */
+  height: 700px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.wrapBGC2 {
+  /* width: 1780px; */
+  height: 700px;
+  background: #204387;
+}
+
+.inset-circle {
+  width: 120px;
+  height: 40px;
+  margin-left: 120px;
+  background-size: 70% 70%;
+
+  background-image: radial-gradient(
+      circle at 100% 100%,
+      transparent 0,
+      transparent 10px,
+      #f5ca0d 10px
+    ),
+    radial-gradient(circle at 0 0, transparent 0, transparent 0px, #f5ca0d 0px),
+    radial-gradient(
+      circle at 100% 0,
+      transparent 0,
+      transparent 0px,
+      #f5ca0d 0px
+    ),
+    radial-gradient(
+      circle at 0 100%,
+      transparent 0,
+      transparent 10px,
+      #f5ca0d 10px
+    );
+  background-repeat: no-repeat;
+  background-position: right bottom, left top, right top, left bottom;
+}
+
+.inset-circle .category {
+  text-align: center;
+  margin: auto;
+  padding: 6px;
+  font-size: 24px;
+  color: #204387;
+}
+
+/* footer */
+.footerFrame {
+  /* width: 1824px; */
+  height: 200px;
+  margin: auto;
+  border: 15px solid #fff;
+  background: transparent;
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+}
+
+.footerFrame .social img {
+  margin-top: 45px;
+  margin-left: 80px;
+}
