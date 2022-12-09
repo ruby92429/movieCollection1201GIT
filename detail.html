@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>六角上課Practice</title>
-    <link rel="stylesheet" href="./movieCollection1201.css" />
-
+    <link rel="stylesheet" href="./detail.css" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -20,63 +19,23 @@
   </head>
   <body>
     <div class="fog">
-      <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-          <div class="bannerFrame">
-            <div class="cornNav">
-              <a href="#"
-                ><img
-                  width="65"
-                  height="60"
-                  src="./picture/popcorn.jpg"
-                  alt="logo"
-              /></a>
-              <div class="navbar-right">
-                <li><a href="#section_ask">註冊</a></li>
-                <li><a href="#section_about">登入</a></li>
-              </div>
-            </div>
-
-            <h1>Veg Out</h1>
-            <h4>BE A COUCH POTATO</h4>
-
-            <div class="search-category">
-              <select name="" class="movieSearch">
-                <option value="電影分類選項">電影分類選項</option>
-                <option value="喜劇">喜劇</option>
-                <option value="動作">動作</option>
-                <option value="科幻">科幻</option>
-                <option value="恐怖">恐怖</option>
-                <option value="劇情">劇情</option>
-                <option value="動漫">動漫</option>
-              </select>
-              <div class="search">
-                <input class="keyword" placeholder="關鍵字搜尋" />
-              </div>
-
-              <a href="#" class="searchBtn"
-                ><img src="./picture/searchicon.png" alt="logo"
-              /></a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="jumbotron jumbotron-fluid"></div>
 
       <div class="container">
-        <section id="section_new">
+        <section id="section_intro">
           <div class="gap">
-            <div class="defNew">
+            <div class="defIntro">
               <div class="col-sm-12"></div>
               <!-- Bootstrap格線系統與RWD的應用 -->
 
-              <div class="new">
+              <div class="intro">
                 <div class="mainTitle">本月最新</div>
                 <div class="subTitle">擔心踩雷，那就前往電影預告觀賞吧~</div>
               </div>
 
               <div class="col-md-4 col-sm-6">
-                <div class="new_wrap">
-                  <div class="new_item pic">
+                <div class="intro_wrap">
+                  <div class="intro_item pic">
                     <img
                       src="https://movies.yahoo.com.tw/i/o/production/movies/November2022/NTLCdS5uypXtdWlqZoSg-1080x1543.jpg"
                       alt=""
@@ -85,7 +44,7 @@
                     />
                   </div>
 
-                  <div class="new_item text">
+                  <div class="intro_item text">
                     <h4>
                       <!-- <div class="html5-video-container" data-layer="0"><video tabindex="-1" class="video-stream html5-main-video" controlslist="nodownload" src="blob:https://www.youtube.com/fd04e121-c822-4f07-bf84-4a541385e4bc" style="width: 894px; height: 503px; left: 0px; top: 0px;"></video></div> -->
                       <!-- <video src="clip.mp4" controls></video> -->
@@ -113,10 +72,10 @@
                 </div>
               </div>
 
-              <div class="defNew_left_top"></div>
-              <div class="defNew_right_top"></div>
-              <div class="defNew_left_bottom"></div>
-              <div class="defNew_right_bottom"></div>
+              <div class="defIntro_left_top"></div>
+              <div class="defIntro_right_top"></div>
+              <div class="defIntro_left_bottom"></div>
+              <div class="defIntro_right_bottom"></div>
             </div>
           </div>
         </section>
@@ -655,6 +614,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="./movieCollection1201.js"></script>
+    <script src="./detail.js"></script>
   </body>
 </html>

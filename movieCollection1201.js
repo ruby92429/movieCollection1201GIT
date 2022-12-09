@@ -45,6 +45,9 @@ function renderMovie(movie) {
   console.log(movie);
   let str = "";
   movie.forEach((item) => {
+    if (item["overview"].length > 120) {
+      item["overview"] = item["overview"].substring(0, 120) + "...";
+    } //避免內容太多切字串
     str += `
     <div class="col-sm-12"></div>
     <!-- Bootstrap格線系統與RWD的應用 -->
@@ -60,8 +63,8 @@ function renderMovie(movie) {
           <img
             src="${item.cover}"
             alt=""
-            width="700"
-            height="400"
+            width="350"
+            height="500"
           />
         </div>
 
@@ -71,7 +74,7 @@ function renderMovie(movie) {
             <!-- <video src="clip.mp4" controls></video> -->
             <iframe
               width="300"
-              height="200"
+              height="150"
               src="${item.video}"
               title="${item.title}"
               frameborder="0"
@@ -83,7 +86,8 @@ function renderMovie(movie) {
             <p>
             ${item.overview}
 
-              <a href="" class="btn">more</a>
+              <a href="detail.html?id=${item.id}"" class="btn">more</a>
+              
             </p>
           </h4>
         </div>
@@ -96,6 +100,7 @@ function renderMovie(movie) {
     <div class="defNew_right_bottom"></div>
   </div>
     `;
+    //於href寫入要連結的網頁網址並加上id
   });
   defNew.innerHTML = str;
 }
