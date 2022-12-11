@@ -5,7 +5,8 @@ const defColumn = document.querySelector(".defColumn");
 const local = document.querySelector(".local");
 const remote = document.querySelector(".remote");
 const dialogue = document.querySelector(".dialogue");
-
+const one = document.querySelector(".one");
+const two = document.querySelector(".two");
 let idData = [];
 let commentData = [];
 const _url = "http://localhost:3000";
@@ -181,6 +182,6 @@ function renderComment(comment) {
     </div>`;
     }
   });
-  local.innerHTML = oddstr;
-  remote.innerHTML = evenstr;
+  one.innerHTML = oddstr;
+  two.innerHTML = evenstr;
 }
