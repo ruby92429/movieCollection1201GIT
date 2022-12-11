@@ -5,20 +5,78 @@
   /* margin: auto; */
 }
 
+.headerFrame {
+  width: 500px;
+  height: 130px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border: 15px solid #fff;
+  background: transparent;
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+}
+
+.cornNav {
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.cornNav img {
+  margin-right: 50px;
+}
+.navbar-right {
+  display: flex;
+}
+.navbar-right a {
+  color: #204387;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  padding-left: 0;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.navbar-right a:hover {
+  color: #f5ca0d;
+}
+
+.navbar-right li {
+  list-style: none;
+}
+
 .jumbotron {
   height: 550px;
   background: url(./picture/detailBanner.gif) no-repeat center center / cover;
 }
 
 .container {
-  padding-top: 80px;
+  padding-top: 20px;
 }
 
 .gap {
   margin-bottom: 100px;
 }
 
-/* 本月最新 */
+/* 電影介紹 */
 #section_intro {
   margin-top: 50px;
 }
@@ -96,7 +154,7 @@
 
 .intro_wrap {
   display: flex;
-  width: 800px;
+  width: 1000px;
   margin: auto;
 }
 
@@ -109,7 +167,7 @@
   /* 解決圖片下方空隙的小瑕疵，造成原因是基線，所以可以用vertical-align寫成top或bottom或center，去解決*/
   vertical-align: bottom;
   margin-top: 35px;
-  margin-left: 300px;
+  margin-left: 140px;
   padding: 0px;
 }
 
@@ -120,52 +178,74 @@
   justify-content: center;
   padding: 0px;
   text-align: left;
-  margin-left: 320px;
+  margin-left: 60px;
 }
 
-.intro_wrap .intro_item h1 {
-  /* width: 500px; */
-  font-size: 25px;
+.intro_wrap .text .infomation {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px 30px;
+  font-size: 18px;
+  color: #fff;
 }
 
-.intro_wrap .intro_item p {
-  /* width: 500px; */
-  font-size: 15px;
-  padding: 0;
-  margin-bottom: 20px;
-}
-
-.intro_item .btn {
-  /* width: 100px; */
-  height: 40px;
-  line-height: 1.5em;
-  font-size: 20px;
-  border: solid 3px #000;
-  padding: 0 1em;
-  align-self: flex-end;
-  /* 因為主軸已經變column，所以次軸align-self靠右對齊end */
-  text-decoration: none;
-  /* 底線拿掉 */
-  border-radius: 200px;
+.intro_wrap .text .deatil {
+  display: flex;
+  justify-content: center;
   margin-top: 30px;
-  margin-left: 200px;
-  color: #000;
 }
 
-/* 電影發燒排行榜 */
-.defHotrank {
+.intro_wrap .text .deatil .type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+.intro_wrap .text .deatil .genre {
+  font-size: 15px;
+  color: #0a42b2;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px;
+  margin: 10px;
+  width: 50px;
+  height: 30px;
+  background-color: #f5ca0d;
+  border-radius: 15px;
+}
+
+.intro_wrap .text .deatil .mark {
+  font-size: 15px;
+  color: #0a42b2;
+  font-weight: bold;
+  text-align: center;
+  padding: 4px;
+  margin: 10px;
+  width: 50px;
+  height: 30px;
+  background-color: #f5ca0d;
+  border-radius: 15px;
+}
+
+/* 電影專欄 */
+#section_column {
+  margin-top: 50px;
+}
+
+.defColumn {
   /* width: 1800px; */
-  height: 700px;
+  height: 480px;
   position: relative;
   margin: auto;
+  background-color: #ea7fa8;
   border: 8px solid #fff;
-  background-color: #df7db7;
 }
 
-.defHotrank_left_top,
-.defHotrank_right_top,
-.defHotrank_left_bottom,
-.defHotrank_right_bottom {
+.defColumn_left_top,
+.defColumn_right_top,
+.defColumn_left_bottom,
+.defColumn_right_bottom {
   position: absolute;
   width: 90px;
   height: 90px;
@@ -174,8 +254,8 @@
   background: transparent;
 }
 
-.defHotrank_left_top {
-  top: -9px;
+.defColumn_left_top {
+  top: -8px;
   left: -9px;
   border-radius: 0 0 90px 0;
   border-bottom: 8px solid #fff;
@@ -183,8 +263,8 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.defHotrank_right_top {
-  top: -9px;
+.defColumn_right_top {
+  top: -8px;
   right: -9px;
   border-radius: 0 0 0 90px;
   border-bottom: 8px solid #fff;
@@ -192,7 +272,7 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.defHotrank_left_bottom {
+.defColumn_left_bottom {
   left: -9px;
   bottom: -9px;
   border-radius: 0 90px 0 0;
@@ -201,7 +281,7 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.defHotrank_right_bottom {
+.defColumn_right_bottom {
   right: -9px;
   bottom: -9px;
   border-radius: 90px 0 0 0;
@@ -210,49 +290,62 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.hotrank {
+.column {
   text-align: center;
 }
-.hotrank .mainTitle {
+.column .mainTitle {
   margin-top: 15px;
   font-size: 40px;
   color: #fff;
 }
-.hotrank .subTitle {
-  font-size: 25px;
-  color: #fff;
-  padding-top: 10px;
-}
-.imgRow {
+
+.column_wrap {
   display: flex;
+  width: 800px;
+  margin: auto;
+}
+
+.column_wrap .column_item {
+  width: 50%;
+}
+
+.column_wrap .pic img {
+  /* width: 800px; */
+  /* 解決圖片下方空隙的小瑕疵，造成原因是基線，所以可以用vertical-align寫成top或bottom或center，去解決*/
+  vertical-align: bottom;
+  margin-top: 10px;
+  margin-left: 200px;
+  padding: 0px;
+}
+
+.column_wrap .text {
+  display: flex;
+  /* 資料流主軸預設是左右，所以要改為由上往下為"欄column"，所以flex-direction: column;，置中justify-content: center; */
+  flex-direction: column;
   justify-content: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  align-items: center;
+  padding: 0px;
+  text-align: left;
+  margin-left: 140px;
 }
 
-.imgRow .poster-rank {
-  width: 350px;
-}
-
-.defHotrank img {
-  width: 260px;
-  height: 400px;
-  margin-left: 50px;
-  object-fit: cover;
-}
-
-.rankTitle h3 {
-  text-align: center;
+.column_wrap .text h1 {
+  width: 420px;
   font-size: 30px;
   color: #fff;
-  margin-top: 20px;
 }
 
-/* 熱門推薦 */
-.defRef {
+.column_wrap .text p {
+  width: 420px;
+  font-size: 18px;
+  padding: 0;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* 心得分享 */
+.defComment {
   /* width: 1800px; */
-  height: 4500px;
+  height: 800px;
   position: relative;
 
   margin: auto;
@@ -260,10 +353,10 @@
   border: 11px solid #fff;
 }
 
-.defRef_left_top,
-.defRef_right_top,
-.defRef_left_bottom,
-.defRef_right_bottom {
+.defComment_left_top,
+.defComment_right_top,
+.defComment_left_bottom,
+.defComment_right_bottom {
   position: absolute;
   width: 90px;
   height: 90px;
@@ -272,7 +365,7 @@
   background: transparent;
 }
 
-.defRef_left_top {
+.defComment_left_top {
   top: -11px;
   left: -11px;
   border-radius: 0 0 90px 0;
@@ -281,7 +374,7 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.defRef_right_top {
+.defComment_right_top {
   top: -11px;
   right: -12px;
   border-radius: 0 0 0 90px;
@@ -290,7 +383,7 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.defRef_left_bottom {
+.defComment_left_bottom {
   left: -11px;
   bottom: -11px;
   border-radius: 0 90px 0 0;
@@ -299,7 +392,7 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.defRef_right_bottom {
+.defComment_right_bottom {
   right: -12px;
   bottom: -11px;
   border-radius: 90px 0 0 0;
@@ -308,117 +401,101 @@
   background: url(./picture/noise\ 8.png);
 }
 
-.ref {
+.comment {
   text-align: center;
 }
-.ref .mainTitle {
+.comment .mainTitle {
   margin-top: 15px;
   font-size: 40px;
   color: #fff;
 }
-.ref .subTitle {
-  font-size: 25px;
-  color: #fff;
-  padding-top: 10px;
-}
 
-.wrap {
-  /* width: 800px;
-    height: 800px; */
-
-  display: flex;
-  justify-content: space-evenly;
-  /* margin: auto; */
-  /* margin:auto 會自動將空白處劃分置中 */
-}
-
-.item {
-  width: 270px;
-  height: 550px;
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: solid 1px rgba(255, 255, 255, 0.1);
-  margin-top: 50px;
-  /* transform: translateY(0px);
-    transition: 0.5s; */
-  /* 滑鼠觸碰動畫變動 */
-}
-
-.item img {
-  width: 268px;
-  /* width: 100%; */
-  vertical-align: bottom;
-}
-
-.item h2 {
-  border-bottom: solid 1px #888;
-  padding-bottom: 0.3em;
-  margin-bottom: 0.4em;
-  margin-top: 10px;
-  font-weight: 900;
-  font-size: 25px;
-}
-
-.item p {
-  line-height: 1.6;
-  font-weight: 400;
-  margin: 0;
-}
-
-.item .txt {
-  padding: 5px;
-  margin-top: 5px;
-  position: relative;
-  color: #fff;
-}
-
-.wrapBGC1 {
-  /* width: 1780px; */
-  height: 700px;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-.wrapBGC2 {
-  /* width: 1780px; */
-  height: 700px;
-  background: #0a42b2;
-}
-
-.inset-circle {
-  width: 120px;
-  height: 40px;
-  margin-left: 120px;
-  background-size: 70% 70%;
-
-  background-image: radial-gradient(
-      circle at 100% 100%,
-      transparent 0,
-      transparent 10px,
-      #f5ca0d 10px
-    ),
-    radial-gradient(circle at 0 0, transparent 0, transparent 0px, #f5ca0d 0px),
-    radial-gradient(
-      circle at 100% 0,
-      transparent 0,
-      transparent 0px,
-      #f5ca0d 0px
-    ),
-    radial-gradient(
-      circle at 0 100%,
-      transparent 0,
-      transparent 10px,
-      #f5ca0d 10px
-    );
-  background-repeat: no-repeat;
-  background-position: right bottom, left top, right top, left bottom;
-}
-
-.inset-circle .category {
-  text-align: center;
+.defComment .dialogue {
+  width: 800px;
+  padding: 20px;
+  /* box-shadow: 0 0 10px #3e92cc; */
+  background-color: #0a42b2;
   margin: auto;
-  padding: 6px;
-  font-size: 24px;
-  color: #204387;
+}
+
+.defComment .user {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: flex-start;
+  /* 讓對話視窗對齊頂端 flex-start，不會因內容太少，對話框還很大 */
+}
+
+.defComment .user .reply {
+  width: 60px;
+  text-align: center;
+  flex-shrink: 0;
+  /* 因為txt字太多容器不夠大會擠到reply，所以不要讓reply被壓縮仍以原固定大小顯示要設定flex-shrink: 0; */
+}
+
+.defComment .user .pic img {
+  width: 100%;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+.defComment .user .name {
+  color: #f5ca0d;
+  font-size: 25px;
+}
+
+.defComment .user .txt {
+  /* background: #aaa; */
+  padding: 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.defComment .remote .txt {
+  margin-left: 30px;
+  margin-right: 200px;
+  margin-top: 40px;
+  background-color: #fff;
+  color: #000;
+  font-size: 20px;
+}
+
+.defComment .local .txt {
+  margin-right: 30px;
+  margin-left: 200px;
+  margin-top: 40px;
+  order: -1;
+  /* 因為user有做display: flex;所以可以做order排序，讓頭像靠右，訊息-1往左 */
+  background-color: #3e92cc;
+  color: #fff;
+  font-size: 20px;
+}
+
+.defComment .local {
+  justify-content: flex-end;
+  /* 不讓local因為對話內容多寡而左右移動，應緊貼著右邊 */
+}
+
+.defComment .remote .txt::before,
+.defComment .local .txt::before {
+  content: "";
+  position: absolute;
+  /* 所以.user .txt要做position: relative; */
+  top: 15px;
+  /* 對話三角形製作 */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+.defComment .remote .txt::before {
+  /* 對話三角形製作 */
+  border-right: 12px solid #fff;
+  left: -12px;
+}
+
+.defComment .local .txt::before {
+  /* 對話三角形製作 */
+  border-left: 12px solid #3e92cc;
+  right: -12px;
 }
 
 /* footer */
