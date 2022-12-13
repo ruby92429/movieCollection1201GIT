@@ -167,7 +167,9 @@ function renderComment(comment) {
       ${item.content}
       </div>
     </div>`;
-    } else {
+    }
+
+    if (index % 2 == 1) {
       console.log(item);
       evenstr += ` <div class="user local">
       <div class="reply">
