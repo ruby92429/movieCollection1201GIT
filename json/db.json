@@ -56,9 +56,39 @@
     },
     {
       "email": "peter@mail.com",
-      "password": "$2a$10$KU2FHVWQ4yIDwAtyGgdyteAuvDOjlCu.601lGTWJk0VlgGmWL419O",
+      "password": "$2a$10$xZnkqgmxDPhRS.WlRFrjwOYnxB3ZkZi4x2ixgNjSiCYCwZRy6aLp6",
       "nickName": "PETER",
       "id": 10
+    },
+    {
+      "email": "frank566@gmail.com",
+      "password": "$2a$10$9qaS/iUfepUTqoUxDvrLOugl3tlAc9NMjg3S.Ard5R2qVGE0jKrEa",
+      "nickName": "frank566",
+      "id": 11
+    },
+    {
+      "email": "summer88@gmail.com",
+      "password": "$2a$10$0JoYhUvRgofmqwMSeM/5B.MZgreRC0Q4dbIcUeX6dTPjkZ.OFBdtW",
+      "nickName": "SUMMER",
+      "id": 12
+    },
+    {
+      "email": "ruby555@gmail.com",
+      "password": "$2a$10$qfssTc4Xl8ZBXqYMwhXituzypBcbqqUFI3FLZO046nr4F.SG6kzVG",
+      "nickName": "ruby555",
+      "id": 13
+    },
+    {
+      "email": "ruby333@gmail.com",
+      "password": "$2a$10$b70mpmxtgTGRyZrM8oGJN.g8.cB1hXoPNkQ5g3cjpdIRmgazyAW1u",
+      "nickName": "ruby333",
+      "id": 14
+    },
+    {
+      "email": "ruby777@gmail.com",
+      "password": "$2a$10$eYtjzSGCPzInqystsrGL.un1xPb0Ti2luYFjk/zziofm.r8qzWQAK",
+      "nickName": "ruby777",
+      "id": 15
     }
   ],
   "ranks": [

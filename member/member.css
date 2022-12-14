@@ -1,0 +1,380 @@
+.fog {
+  /* width: 2538px; */
+  height: 7700px;
+  background: url(/picture/noise\ 8.png);
+  /* margin: auto; */
+}
+
+.headerFrame {
+  width: 500px;
+  height: 130px;
+  margin-left: 50px;
+  margin-top: 30px;
+  border: 15px solid #fff;
+  background: transparent;
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+}
+
+.cornNav {
+  height: 100px;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+  vertical-align: middle;
+}
+
+.cornNav img {
+  margin-right: 50px;
+}
+.navbar-right {
+  display: flex;
+}
+.navbar-right a {
+  color: #204387;
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  text-decoration: none;
+  padding-left: 0;
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.navbar-right a:hover {
+  color: #f5ca0d;
+}
+
+.navbar-right li {
+  list-style: none;
+}
+
+.jumbotron {
+  height: 550px;
+  background: url(/picture/detailBanner.gif) no-repeat center center / cover;
+}
+
+.container {
+  padding-top: 20px;
+}
+
+.gap {
+  margin-bottom: 100px;
+}
+
+/* 電影近期欣賞 */
+.defrecent {
+  /* width: 1800px; */
+  height: 700px;
+  position: relative;
+  margin: auto;
+  border: 8px solid #fff;
+  background-color: #f5ca0d;
+}
+
+.defrecent_left_top,
+.defrecent_right_top,
+.defrecent_left_bottom,
+.defrecent_right_bottom {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  z-index: 1;
+  background: transparent;
+}
+
+.defrecent_left_top {
+  top: -9px;
+  left: -9px;
+  border-radius: 0 0 90px 0;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defrecent_right_top {
+  top: -9px;
+  right: -9px;
+  border-radius: 0 0 0 90px;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defrecent_left_bottom {
+  left: -9px;
+  bottom: -9px;
+  border-radius: 0 90px 0 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defrecent_right_bottom {
+  right: -9px;
+  bottom: -9px;
+  border-radius: 90px 0 0 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.recent {
+  text-align: center;
+}
+.recent .mainTitle {
+  margin-top: 15px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.imgRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.imgRow .poster-recent {
+  width: 350px;
+}
+
+.defrecent img {
+  width: 260px;
+  height: 400px;
+  margin-left: 50px;
+  object-fit: cover;
+}
+
+.recentTitle h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* 電影相似推薦 */
+.defsimilar {
+  /* width: 1800px; */
+  height: 700px;
+  position: relative;
+  margin: auto;
+  border: 8px solid #fff;
+  background-color: #d04215;
+}
+
+.defsimilar_left_top,
+.defsimilar_right_top,
+.defsimilar_left_bottom,
+.defsimilar_right_bottom {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  z-index: 1;
+  background: transparent;
+}
+
+.defsimilar_left_top {
+  top: -9px;
+  left: -9px;
+  border-radius: 0 0 90px 0;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defsimilar_right_top {
+  top: -9px;
+  right: -9px;
+  border-radius: 0 0 0 90px;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defsimilar_left_bottom {
+  left: -9px;
+  bottom: -9px;
+  border-radius: 0 90px 0 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defsimilar_right_bottom {
+  right: -9px;
+  bottom: -9px;
+  border-radius: 90px 0 0 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.similar {
+  text-align: center;
+}
+.similar .mainTitle {
+  margin-top: 15px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.imgRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.imgRow .poster-similar {
+  width: 350px;
+}
+
+.defsimilar img {
+  width: 260px;
+  height: 400px;
+  margin-left: 50px;
+  object-fit: cover;
+}
+
+.similarTitle h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* 電影收藏 */
+.defcollect {
+  /* width: 1800px; */
+  height: 700px;
+  position: relative;
+  margin: auto;
+  border: 8px solid #fff;
+  background-color: #0a42b2;
+}
+
+.defcollect_left_top,
+.defcollect_right_top,
+.defcollect_left_bottom,
+.defcollect_right_bottom {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  border: 1px solid transparent;
+  z-index: 1;
+  background: transparent;
+}
+
+.defcollect_left_top {
+  top: -9px;
+  left: -9px;
+  border-radius: 0 0 90px 0;
+  border-bottom: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defcollect_right_top {
+  top: -9px;
+  right: -9px;
+  border-radius: 0 0 0 90px;
+  border-bottom: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defcollect_left_bottom {
+  left: -9px;
+  bottom: -9px;
+  border-radius: 0 90px 0 0;
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.defcollect_right_bottom {
+  right: -9px;
+  bottom: -9px;
+  border-radius: 90px 0 0 0;
+  border-top: 8px solid #fff;
+  border-left: 8px solid #fff;
+  background: url(/picture/noise\ 8.png);
+}
+
+.collect {
+  text-align: center;
+}
+.collect .mainTitle {
+  margin-top: 15px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.imgRow {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  align-items: center;
+}
+
+.imgRow .poster-collect {
+  width: 350px;
+}
+
+.defcollect img {
+  width: 260px;
+  height: 400px;
+  margin-left: 50px;
+  object-fit: cover;
+}
+
+.collectTitle h3 {
+  text-align: center;
+  font-size: 30px;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* footer */
+.footerFrame {
+  /* width: 1824px; */
+  height: 200px;
+  margin: auto;
+  border: 15px solid #fff;
+  background: transparent;
+  clip-path: polygon(
+    15px 0,
+    calc(100% - 15px) 0,
+    100% 15px,
+    100% calc(100% - 15px),
+    calc(100% - 15px) 100%,
+    15px 100%,
+    0 calc(100% - 15px),
+    0 15px
+  );
+}
+
+.footerFrame .social img {
+  margin-top: 45px;
+  margin-left: 80px;
+}

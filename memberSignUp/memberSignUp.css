@@ -1,0 +1,119 @@
+* {
+  /* border: solid 1px black; */
+  position: relative;
+  font-family: 微軟正黑體;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-header {
+  /* background: linear-gradient(0deg, #dfb98b, #626059); */
+  height: 500px;
+  background-image: url("/picture/pink-ticket.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .main-nav {
+  /* background: linear-gradient(0deg, #dfb98b, #626059); */
+  margin: auto;
+  /* height: 500px; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.container .main-nav a {
+  text-decoration: none;
+  margin: 10px 30px;
+  padding: 2px;
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+  /* 因為a::after有做定位 */
+  display: inline-block;
+  /* 因為a本身是display:inline所以要改成inline-block不然會無法做到translateY上下移動的效果 */
+  transform: translateY(0px);
+  transition: 0.3s;
+}
+
+.container {
+  background: linear-gradient(0deg, #626059, #e18848);
+  height: 500px;
+}
+
+.container .form {
+  width: 300px;
+  height: 270px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: solid 2px #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  /* 毛玻璃效果 */
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top: 5px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 70px auto 15px;
+}
+
+.container h1 {
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+h4 {
+  display: block;
+  text-align: left;
+  font-weight: 900;
+  left: 50px;
+  right: 50px;
+  margin: auto;
+  padding: 6px;
+}
+
+input[type="text"] {
+  height: 30px;
+  width: 200px;
+  display: block;
+  text-align: left;
+  border-radius: 4px;
+  border-color: #c0bcbc;
+  border-style: solid;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.signUpBtn {
+  color: #fff;
+  width: 100px;
+  background-color: rgb(133, 166, 209);
+  margin-left: 30px;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  padding: 4px;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 900;
+}
+
+.sendBtn {
+  color: #fff;
+  width: 100px;
+  background-color: rgb(143, 210, 164);
+  margin-left: 32px;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  padding: 4px;
+  border-radius: 4px;
+  border-style: none;
+  font-weight: 900;
+}
