@@ -89,6 +89,42 @@
       "password": "$2a$10$eYtjzSGCPzInqystsrGL.un1xPb0Ti2luYFjk/zziofm.r8qzWQAK",
       "nickName": "ruby777",
       "id": 15
+    },
+    {
+      "email": "jane777@gmail.com",
+      "password": "$2a$10$olrpm/8JVKobKdjUAccsxeaQcTU6k884dh2lLe.6nnWbIYyymEGaO",
+      "nickName": "JANE",
+      "id": 16
+    },
+    {
+      "email": "hank77@gmail.com",
+      "password": "$2a$10$NhqP6so33s6VaNSBRX9JT.DZJPlg9Kt4ppkCTQ.s8m.cS/.Yuf3ay",
+      "nickName": "HANK",
+      "id": 17
+    },
+    {
+      "email": "tony888@gmail.com",
+      "password": "$2a$10$/8hO3J66F9fyYL9f8z5/F.VIh1bzU1XQ61TExEPr0VPYjjy6j.QQm",
+      "nickName": "TONY",
+      "id": 18
+    },
+    {
+      "email": "emily123@gmail.com",
+      "password": "$2a$10$XFajodKwOrgyBxuPca/CxOUCcK9LKspLpFyjFviPy1ZEBq69pIebK",
+      "nickName": "EMILY",
+      "id": 19
+    },
+    {
+      "email": "roxy999@gmail.com",
+      "password": "$2a$10$/uVcIiLvgocyWqGzN0OlQuwMH8f.qm5MPbjGf5yueKGOfILUpzAxu",
+      "nickName": "ROXY",
+      "id": 20
+    },
+    {
+      "email": "will456@gmail.com",
+      "password": "$2a$10$VmHziKWyEsWgeHgX/YWCJuxheYR5XH.eskQVfGp061TF9cHZ8move",
+      "nickName": "WILL",
+      "id": 21
     }
   ],
   "ranks": [

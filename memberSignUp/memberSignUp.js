@@ -50,7 +50,7 @@ function callSingUp() {
         console.log(response);
 
         alert("恭喜帳號註冊成功");
-
+        location.href = "/memberLogin/memberLogin.html";
         // if (response.data.message == "帳號註冊成功") {
         //   //利用data中的 message屬性的內容告知已成功，印在網頁上告訴顧客
         //   alert("恭喜帳號註冊成功");
