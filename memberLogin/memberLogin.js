@@ -7,20 +7,13 @@ console.log(loginAccount, loginPassword, login);
 const apiURL = `http://localhost:3000`;
 let token = ""; //尚未取得token，設為空值
 let id = "";
+let nick = "";
 login.addEventListener("click", function (e) {
   console.log("是否被登入");
   loginUp();
 });
 
 function loginUp() {
-  // let loginObj = {
-  //   user: {
-  //     email: loginAccount.value,
-  //     password: loginPassword.value,
-  //   },
-  // };
-  // console.log(loginObj);
-
   axios
     .post(`${apiURL}/login`, {
       email: loginAccount.value,
@@ -28,23 +21,20 @@ function loginUp() {
     })
     .then((res) => {
       console.log(res);
-      token = response.data.accessToken; //取得token
-      id = response.data.user.id; //取得id
-      console.log(token, id);
-      //token = res.headers.authorization; //成功取得token
+      token = res.data.accessToken; //取得token
+      id = res.data.user.id; //取得id
+      nick = res.data.user.nickName;
+      console.log(token, id, nick);
       localStorage.setItem("tokenKEY", token);
+      localStorage.setItem("idKEY", id);
+      localStorage.setItem("nicknameKEY", nick);
       alert("登入成功");
-      //console.log(res);
-      //console.log(res.data.nickname);
-      //const nickVALUE = res.data.nickname;
-      //console.log(nickVALUE);
-      //localStorage.setItem("nicknameKEY", nickVALUE);
-      //location.href = "/member/member.html";
-      //loginAccount.value = ""; //輸入完將填寫欄位自動清空
-      //loginPassword.value = ""; //輸入完將填寫欄位自動清空
+      location.href = "/member/member.html";
+      loginAccount.value = ""; //輸入完將填寫欄位自動清空
+      loginPassword.value = ""; //輸入完將填寫欄位自動清空
     })
     .catch((error) => {
-      console.log(error.response);
+      console.log(error);
       alert("登入失敗，此帳號不存在或帳號密碼錯誤");
     }); //失敗時
 }

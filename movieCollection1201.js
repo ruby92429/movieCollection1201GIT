@@ -18,8 +18,8 @@ async function compare() {
   console.log(movieData);
   let targetMovie = [];
   targetMovie = movieData.filter(function (item) {
-    let title = item.title.toLowerCase();
-    return title.match(keyword);
+    let title = item.title.toLowerCase(); //電影標題一個個轉小寫為title
+    return title.match(keyword); //再將轉小寫為title電影標題去做match比對放入targetMovie
   });
   renderMovie(targetMovie);
 }
