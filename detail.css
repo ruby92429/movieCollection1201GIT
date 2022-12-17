@@ -41,7 +41,7 @@
 .navbar-right {
   display: flex;
 }
-.navbar-right a {
+.navbar-right button {
   color: #204387;
   text-decoration: none;
   display: inline-block;
@@ -53,9 +53,11 @@
   padding-left: 0;
   margin-left: 20px;
   font-size: 20px;
+  border: 0;
+  background-color: transparent;
 }
 
-.navbar-right a:hover {
+.navbar-right button:hover {
   color: #f5ca0d;
 }
 

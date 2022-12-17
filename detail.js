@@ -197,7 +197,6 @@ function renderComment(comment) {
   two.innerHTML = evenstr;
 }
 
-//axios寫法
 //判斷使用者有沒有登入
 function detailAccount() {
   console.log(bynickname);
@@ -205,13 +204,13 @@ function detailAccount() {
   let str = "";
   //如果沒有登入
   if (bytoken == "") {
-    str += `<li class="login"><a href="#section_about">登入</a></li>`;
+    str += `<button class="login">登入</button>`;
     navbar.innerHTML = str;
     alert("沒有登入");
   } else {
     //如果有登入
-    str += `  <li class="myaccount"><a href="#section_about">${bynickname}</a></li>
-    <li class="logout"><a href="#section_about">登出</a></li>`;
+    str += `<button class="myaccount">${bynickname}</button>
+    <button class="logout">登出</button>`;
     navbar.innerHTML = str;
     alert("有登入");
   }
@@ -221,8 +220,8 @@ function detailAccount() {
 logout.addEventListener("click", logoutAccount);
 function logoutAccount() {
   console.log("555");
-  localStorage.removeItem("token");
-  str += `<li class="login"><a href="#section_about">登入</a></li>`;
+  localStorage.removeItem("bytoken");
+  str += `<button class="login">登入</button>`;
   navbar.innerHTML = str;
   alert("登出");
 }
