@@ -7,11 +7,20 @@ const remote = document.querySelector(".remote");
 const dialogue = document.querySelector(".dialogue");
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
+const navbar = document.querySelector(".navbar-right");
+const logout = document.querySelector(".navbar-right .logout");
+const login = document.querySelector(".navbar-right .login");
+const bytoken = localStorage.getItem("tokenKEY");
+const bynickname = localStorage.getItem("nicknameKEY");
+console.log(typeof bynickname);
 let idData = [];
 let commentData = [];
 const _url = "http://localhost:3000";
 initIntroColumn();
 initComment();
+detailAccount();
+
+/*初始化電影介紹及電影專欄 */
 function initIntroColumn() {
   console.log(id);
   axios
@@ -27,7 +36,7 @@ function initIntroColumn() {
       console.log(error);
     });
 }
-
+/*渲染電影介紹 */
 function renderIntro(intro) {
   console.log(intro);
   let str = "";
@@ -93,7 +102,7 @@ function renderIntro(intro) {
   });
   defIntro.innerHTML = str;
 }
-
+/*渲染電影專欄 */
 function renderColumn(column) {
   console.log(column);
   let str = "";
@@ -133,7 +142,7 @@ function renderColumn(column) {
   });
   defColumn.innerHTML = str;
 }
-
+/*初始化電影心得 */
 function initComment() {
   console.log(id);
   axios
@@ -148,7 +157,7 @@ function initComment() {
       console.log(error);
     });
 }
-
+/*渲染電影心得 */
 function renderComment(comment) {
   console.log(comment);
   let oddstr = "";
@@ -186,4 +195,40 @@ function renderComment(comment) {
   });
   one.innerHTML = oddstr;
   two.innerHTML = evenstr;
+}
+
+//axios寫法
+//判斷使用者有沒有登入
+function detailAccount() {
+  console.log(bynickname);
+
+  let str = "";
+  //如果沒有登入
+  if (bytoken == "") {
+    str += `<li class="login"><a href="#section_about">登入</a></li>`;
+    navbar.innerHTML = str;
+    alert("沒有登入");
+  } else {
+    //如果有登入
+    str += `  <li class="myaccount"><a href="#section_about">${bynickname}</a></li>
+    <li class="logout"><a href="#section_about">登出</a></li>`;
+    navbar.innerHTML = str;
+    alert("有登入");
+  }
+}
+
+//綁定登入/登出按鈕的部分獨立寫在外面
+logout.addEventListener("click", logoutAccount);
+function logoutAccount() {
+  console.log("555");
+  localStorage.removeItem("token");
+  str += `<li class="login"><a href="#section_about">登入</a></li>`;
+  navbar.innerHTML = str;
+  alert("登出");
+}
+
+login.addEventListener("click", loginAccount);
+function loginAccount() {
+  location.href = "/memberLogin/memberLogin.html";
+  alert("跳到登入頁面");
 }

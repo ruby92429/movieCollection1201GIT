@@ -228,6 +228,19 @@
   border-radius: 15px;
 }
 
+.intro_wrap .text .deatil .fa-plus {
+  font-size: 15px;
+  color: #0a42b2;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 4px 8px;
+  margin: 10px;
+  width: 50px;
+  height: 30px;
+  background-color: #f5ca0d;
+  border-radius: 15px;
+}
+
 /* 電影專欄 */
 #section_column {
   margin-top: 50px;
