@@ -1,10 +1,11 @@
 const bytoken = localStorage.getItem("tokenKEY");
+console.log(bytoken);
 const byid = localStorage.getItem("idKEY");
 const bynickname = localStorage.getItem("nicknameKEY");
 console.log(bytoken, byid, bynickname);
 const navbar = document.querySelector(".navbar-right");
-const logout = document.querySelector(".info .logout");
-const login = document.querySelector(".fog .navbar-right .login");
+const logout = document.querySelector("#out");
+const login = document.querySelector("#in");
 const apiURL = `http://localhost:3000`;
 memberAccount();
 /*近期欣賞*/
@@ -112,7 +113,8 @@ logout.addEventListener("click", logoutAccount);
 function logoutAccount() {
   let str = "";
   console.log("555");
-  localStorage.removeItem("bytoken");
+  console.log(bytoken);
+  localStorage.removeItem(bytoken);
   str += `<button class="login">登入</button>`;
   navbar.innerHTML = str;
   alert("登出");
