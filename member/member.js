@@ -109,19 +109,14 @@ function memberAccount() {
 }
 
 //綁定登入/登出按鈕的部分獨立寫在外面
-logout.addEventListener("click", logoutAccount);
-function logoutAccount() {
+logout.addEventListener("click", loginAccount);
+function loginAccount() {
   let str = "";
   console.log("555");
-  console.log(bytoken);
-  localStorage.removeItem(bytoken);
-  str += `<button class="login">登入</button>`;
-  navbar.innerHTML = str;
-  alert("登出");
-}
+  localStorage.clear();
+  // console.log(bytoken);
+  // localStorage.removeItem(bytoken);
 
-login.addEventListener("click", loginAccount);
-function loginAccount() {
+  alert("登出");
   location.href = "/memberLogin/memberLogin.html";
-  alert("跳到登入頁面");
 }
