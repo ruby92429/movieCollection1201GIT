@@ -109,9 +109,20 @@ function memberAccount() {
 }
 
 //綁定登入/登出按鈕的部分獨立寫在外面
+document.querySelector(".logout").addEventListener("click", (e) => {
+  console.log(e.target);
+  const target = e.target.getAttribute("class");
+  if (target === "logout") {
+    //localStorage.setItem("tokenKEY", ""); /*清空tokenKEY資料*/
+    localStorage.clear(); /*清空所有登入資料*/
+
+    location.href = "/memberLogin/memberLogin.html";
+  }
+});
+
+/*
 logout.addEventListener("click", loginAccount);
 function loginAccount() {
-  let str = "";
   console.log("555");
   localStorage.clear();
   // console.log(bytoken);
@@ -120,3 +131,4 @@ function loginAccount() {
   alert("登出");
   location.href = "/memberLogin/memberLogin.html";
 }
+*/
