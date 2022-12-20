@@ -1,4 +1,11 @@
-console.clear();
+const navbar = document.querySelector(".navbar-right");
+const logout = document.querySelector("#out");
+const login = document.querySelector("#in");
+const bytoken = localStorage.getItem("tokenKEY");
+const byid = localStorage.getItem("idKEY");
+const bynickname = localStorage.getItem("nicknameKEY");
+console.log(bytoken);
+memberAccount();
 
 let movieData = []; // 雲端資料的本地紀錄
 
@@ -104,3 +111,40 @@ function renderMovie(movie) {
   });
   defNew.innerHTML = str;
 }
+
+//判斷使用者有沒有登入
+function memberAccount() {
+  console.log("777");
+  console.log(bytoken);
+  let str = "";
+  //如果沒有登入
+  if (bytoken == null) {
+    str += `<button class="login">登入</button>`;
+    navbar.innerHTML = str;
+    alert("沒有登入");
+  } else {
+    //如果有登入
+    str += `<button class="myaccount">${bynickname}</button>
+    <button class="logout">登出</button>`;
+    navbar.innerHTML = str;
+    alert("有登入");
+  }
+}
+
+// document.querySelector(".logout").addEventListener("click", (e) => {
+//   console.log(e.target);
+//   const target = e.target.getAttribute("class");
+//   if (target === "logout") {
+//     localStorage.clear(); /*清空所有登入資料*/
+
+//     location.href = "/memberLogin/memberLogin.html";
+//   }
+// });
+
+document.querySelector(".login").addEventListener("click", (e) => {
+  console.log(e.target);
+  const target = e.target.getAttribute("class");
+  if (target === "login") {
+    location.href = "/memberLogin/memberLogin.html";
+  }
+});

@@ -216,7 +216,7 @@ function detailAccount() {
   }
 }
 
-//綁定登入/登出按鈕的部分獨立寫在外面
+//綁定登出按鈕的部分獨立寫在外面
 logout.addEventListener("click", logoutAccount);
 function logoutAccount() {
   console.log("555");
@@ -225,7 +225,7 @@ function logoutAccount() {
   navbar.innerHTML = str;
   alert("登出");
 }
-
+//綁定登入按鈕的部分獨立寫在外面
 login.addEventListener("click", loginAccount);
 function loginAccount() {
   location.href = "/memberLogin/memberLogin.html";

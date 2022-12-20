@@ -3,6 +3,7 @@ console.log(bytoken);
 const byid = localStorage.getItem("idKEY");
 const bynickname = localStorage.getItem("nicknameKEY");
 console.log(bytoken, byid, bynickname);
+const popcorn = document.querySelector(".cornNav img");
 const navbar = document.querySelector(".navbar-right");
 const logout = document.querySelector("#out");
 const login = document.querySelector("#in");
@@ -108,7 +109,7 @@ function memberAccount() {
   }
 }
 
-//綁定登入/登出按鈕的部分獨立寫在外面
+//綁定登出按鈕的部分獨立寫在外面
 document.querySelector(".logout").addEventListener("click", (e) => {
   console.log(e.target);
   const target = e.target.getAttribute("class");
@@ -132,3 +133,9 @@ function loginAccount() {
   location.href = "/memberLogin/memberLogin.html";
 }
 */
+
+popcorn.addEventListener("click", turnHTML);
+function turnHTML() {
+  location.href = "/index.html";
+  alert("跳到首頁");
+}
