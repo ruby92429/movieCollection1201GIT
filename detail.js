@@ -1,4 +1,5 @@
 const id = location.href.split("=")[1]; //從網址中取出id，以利後續的axios得以利用
+
 console.log(id);
 const defIntro = document.querySelector(".defIntro");
 const defColumn = document.querySelector(".defColumn");
@@ -8,9 +9,10 @@ const dialogue = document.querySelector(".dialogue");
 const one = document.querySelector(".one");
 const two = document.querySelector(".two");
 const navbar = document.querySelector(".navbar-right");
-const logout = document.querySelector(".navbar-right .logout");
-const login = document.querySelector(".navbar-right .login");
+const logout = document.querySelector("#out");
+const login = document.querySelector("#in");
 const bytoken = localStorage.getItem("tokenKEY");
+const byid = localStorage.getItem("idKEY");
 const bynickname = localStorage.getItem("nicknameKEY");
 console.log(typeof bynickname);
 let idData = [];
@@ -18,7 +20,7 @@ let commentData = [];
 const _url = "http://localhost:3000";
 initIntroColumn();
 initComment();
-detailAccount();
+memberAccount();
 
 /*初始化電影介紹及電影專欄 */
 function initIntroColumn() {
@@ -198,36 +200,38 @@ function renderComment(comment) {
 }
 
 //判斷使用者有沒有登入
-function detailAccount() {
-  console.log(bynickname);
-
+function memberAccount() {
+  console.log("777");
+  console.log(bytoken);
   let str = "";
   //如果沒有登入
-  if (bytoken == "") {
+  if (bytoken == null) {
     str += `<button class="login">登入</button>`;
     navbar.innerHTML = str;
     alert("沒有登入");
+
+    document.querySelector(".login").addEventListener("click", (e) => {
+      console.log(e.target);
+      const target = e.target.getAttribute("class");
+      if (target === "login") {
+        location.href = "/memberLogin/memberLogin.html";
+      }
+    });
   } else {
     //如果有登入
     str += `<button class="myaccount">${bynickname}</button>
     <button class="logout">登出</button>`;
     navbar.innerHTML = str;
     alert("有登入");
-  }
-}
 
-//綁定登出按鈕的部分獨立寫在外面
-logout.addEventListener("click", logoutAccount);
-function logoutAccount() {
-  console.log("555");
-  localStorage.removeItem("bytoken");
-  str += `<button class="login">登入</button>`;
-  navbar.innerHTML = str;
-  alert("登出");
-}
-//綁定登入按鈕的部分獨立寫在外面
-login.addEventListener("click", loginAccount);
-function loginAccount() {
-  location.href = "/memberLogin/memberLogin.html";
-  alert("跳到登入頁面");
+    document.querySelector(".logout").addEventListener("click", (e) => {
+      console.log(e.target);
+      const target = e.target.getAttribute("class");
+      if (target === "logout") {
+        localStorage.clear(); /*清空所有登入資料*/
+
+        location.href = "/memberLogin/memberLogin.html";
+      }
+    });
+  }
 }

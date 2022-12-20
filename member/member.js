@@ -121,19 +121,6 @@ document.querySelector(".logout").addEventListener("click", (e) => {
   }
 });
 
-/*
-logout.addEventListener("click", loginAccount);
-function loginAccount() {
-  console.log("555");
-  localStorage.clear();
-  // console.log(bytoken);
-  // localStorage.removeItem(bytoken);
-
-  alert("登出");
-  location.href = "/memberLogin/memberLogin.html";
-}
-*/
-
 popcorn.addEventListener("click", turnHTML);
 function turnHTML() {
   location.href = "/index.html";

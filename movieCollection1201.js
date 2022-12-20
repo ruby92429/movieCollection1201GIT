@@ -122,29 +122,29 @@ function memberAccount() {
     str += `<button class="login">登入</button>`;
     navbar.innerHTML = str;
     alert("沒有登入");
+
+    document.querySelector(".login").addEventListener("click", (e) => {
+      console.log(e.target);
+      const target = e.target.getAttribute("class");
+      if (target === "login") {
+        location.href = "/memberLogin/memberLogin.html";
+      }
+    });
   } else {
     //如果有登入
     str += `<button class="myaccount">${bynickname}</button>
     <button class="logout">登出</button>`;
     navbar.innerHTML = str;
     alert("有登入");
+
+    document.querySelector(".logout").addEventListener("click", (e) => {
+      console.log(e.target);
+      const target = e.target.getAttribute("class");
+      if (target === "logout") {
+        localStorage.clear(); /*清空所有登入資料*/
+
+        location.href = "/memberLogin/memberLogin.html";
+      }
+    });
   }
 }
-
-// document.querySelector(".logout").addEventListener("click", (e) => {
-//   console.log(e.target);
-//   const target = e.target.getAttribute("class");
-//   if (target === "logout") {
-//     localStorage.clear(); /*清空所有登入資料*/
-
-//     location.href = "/memberLogin/memberLogin.html";
-//   }
-// });
-
-document.querySelector(".login").addEventListener("click", (e) => {
-  console.log(e.target);
-  const target = e.target.getAttribute("class");
-  if (target === "login") {
-    location.href = "/memberLogin/memberLogin.html";
-  }
-});
