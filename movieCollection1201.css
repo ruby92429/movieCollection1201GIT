@@ -1,6 +1,6 @@
 .fog {
   /* width: 2538px; */
-  height: 7700px;
+  /* height: 7700px; */
   background: url(./picture/noise\ 8.png);
   /* margin: auto; */
 }
@@ -74,10 +74,15 @@
   list-style: none;
 }
 
-.bannerFrame h1 {
+.bannerFrame {
+  position: relative;
+}
+
+.bannerFrame #bannerTitle {
   /* width: 504px; */
+  position: absolute;
   height: 200px;
-  margin-top: 160px;
+  margin-top: 150px;
   margin-left: 250px;
   font-family: "Lexend";
   font-style: normal;
@@ -88,7 +93,7 @@
   text-shadow: 0px 4px 22px rgba(0, 0, 0, 0.52);
 }
 
-.bannerFrame h4 {
+.bannerFrame #bannerSlogan {
   /* width: 457px; */
   height: 55px;
   left: 862px;
@@ -101,7 +106,7 @@
   color: #ffff;
   text-shadow: 0px 4px 22px rgba(0, 0, 0, 0.52);
   margin-left: 500px;
-  margin-top: 0;
+  margin-top: 350px;
 }
 
 .search-category {
